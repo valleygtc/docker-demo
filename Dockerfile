@@ -10,6 +10,10 @@ RUN python3 -m venv .venv
 RUN . .venv/bin/activate && pip install --no-cache-dir -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
 
 # 声明我们的程序运行需要的环境变量
+# 可以在 run 时覆盖
+ENV FLASK_APP=manage.py
+ENV FLASK_ENV=production
+ENV DATABASE_URI='mysql+mysqlconnector://{user}:{password}@{localhost}/{db_name}?charset=utf8'
 ENV PORT=5000
 
 EXPOSE 5000

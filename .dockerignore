@@ -12,3 +12,6 @@ __pycache__/
 README.md
 
 log/
+data/
+env.sh
+docker.env
