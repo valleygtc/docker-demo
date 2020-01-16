@@ -18,10 +18,10 @@ $ python run.py
 # Docker
 ```bash
 # build image
-$ docker image build --tag=docker-demo:1 .
+$ docker image build --tag=docker-demo:2 .
 
 # run
-$ docker run -p 5000:5000 -d docker-demo
+$ docker run -p 5000:5000 -v "$PWD/log":/docker-demo/log -d docker-demo:2
 ```
 
 
